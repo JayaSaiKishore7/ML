@@ -1,0 +1,75 @@
+# Configuration file for churn prediction project
+
+# Data Configuration
+data:
+  raw_data_path: "data/raw/customer_data.csv"
+  processed_data_path: "data/processed/"
+  test_size: 0.2
+  random_state: 42
+
+# Model Configuration
+model:
+  models_dir: "models/"
+  model_name: "churn_model.pkl"
+  
+  # Logistic Regression
+  logistic_regression:
+    max_iter: 1000
+    class_weight: "balanced"
+    random_state: 42
+  
+  # Random Forest
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    class_weight: "balanced"
+    random_state: 42
+  
+  # XGBoost
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    scale_pos_weight: 1
+    random_state: 42
+
+# Training Configuration
+training:
+  validation_split: 0.2
+  cross_validation_folds: 5
+  scoring_metric: "f1"
+
+# Evaluation Configuration
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+    - roc_auc
+  
+  plots:
+    - confusion_matrix
+    - roc_curve
+    - precision_recall_curve
+    - feature_importance
+  
+  output_dir: "results/"
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+  
+  # Risk thresholds
+  risk_thresholds:
+    low: 0.3
+    medium: 0.6
+    high: 1.0
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/churn_prediction.log"
