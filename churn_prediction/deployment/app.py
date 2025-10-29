@@ -122,8 +122,10 @@ def predict():
         return jsonify(result), 200
         
     except Exception as e:
+        # Log the full error for debugging
+        app.logger.error(f"Prediction error: {str(e)}")
         return jsonify({
-            'error': str(e)
+            'error': 'An error occurred while making the prediction. Please check your input and try again.'
         }), 500
 
 
@@ -148,8 +150,10 @@ def model_info():
         return jsonify(info), 200
         
     except Exception as e:
+        # Log the full error for debugging
+        app.logger.error(f"Model info error: {str(e)}")
         return jsonify({
-            'error': str(e)
+            'error': 'Unable to retrieve model information'
         }), 500
 
 

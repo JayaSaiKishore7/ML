@@ -123,11 +123,11 @@ python src/evaluate_model.py \
 ```
 Model Evaluation Metrics
 ==================================================
-Accuracy            : 0.6925
-Precision           : 0.6010
-Recall              : 0.7439
-F1_score            : 0.6649
-Roc_auc             : 0.7836
+Accuracy            : 69.25%
+Precision           : 60.10%
+Recall              : 74.39%
+F1_score            : 66.49%
+Roc_auc             : 78.36%
 
 Classification Report
               precision    recall  f1-score   support

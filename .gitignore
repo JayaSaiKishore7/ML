@@ -61,7 +61,7 @@ htmlcov/
 
 # Results and outputs
 results/
-predictions.csv
+**/predictions.csv
 
 # Logs
 *.log
