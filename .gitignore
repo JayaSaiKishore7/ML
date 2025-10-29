@@ -59,6 +59,10 @@ htmlcov/
 *.pth
 *.onnx
 
+# Results and outputs
+results/
+predictions.csv
+
 # Logs
 *.log
 logs/
