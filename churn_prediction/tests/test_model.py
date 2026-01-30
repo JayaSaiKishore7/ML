@@ -44,7 +44,7 @@ class TestChurnModelTrainer:
         trainer = ChurnModelTrainer()
         trainer.initialize_models()
         
-        # Check that models are initialized
+        # Check that models are initializeds
         assert len(trainer.models) > 0
         assert 'Logistic Regression' in trainer.models
         assert 'Random Forest' in trainer.models
