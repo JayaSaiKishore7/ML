@@ -4,7 +4,7 @@ This repository contains end-to-end machine learning projects, from data preproc
 
 ## 🎯 Project Goals
 
-- Build practical machine learning solutions from scratch to deployment
+- Build practical machine learning solutions from scratch to deployments
 - Demonstrate best practices in ML project structure and organization
 - Provide reusable code templates for ML workflows
 - Show end-to-end deployment strategies using Docker and REST APIs
